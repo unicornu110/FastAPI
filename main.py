@@ -39,7 +39,7 @@ def create_post(
         address : _schemas.Addess_create,
         db : _orm.Session = _fastapi.Depends(_services.get_db)
 ):
-    return _services.create_post(db=db, post=address, user_id=user_id)
+    return _services.create_post(db=db, posts=address, user_id=user_id)
 
 
 @app.get("/posts/",response_model=List[_schemas.Address])
